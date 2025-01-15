@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Players</title>
+    <style>
+        body {
+            text-align: center; /* 将内容居中 */
+        }
+        table {
+            width: 600px; /* 设置表格宽度为600像素 */
+            margin: 0 auto; /* 自动水平居中 */
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Players List from Azure Database for PostgreSQL </h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>About</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for player in players %}
+            <tr>
+                <td>{{ player[0] }}</td>
+                <td>{{ player[1] }}</td>
+                <td>{{ player[2] }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="3">No players found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

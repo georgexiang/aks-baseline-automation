@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: flask-deployment
-        image: acraksf7qlptmhmwvmc.azurecr.io/flask:6c6eb75fc1a85e606757cac68e12973965ae1469
+        # image: acraksf7qlptmhmwvmc.azurecr.io/flask:6c6eb75fc1a85e606757cac68e12973965ae1469
+        image: appflaskacr.azurecr.io/flask:d4b2b49b57fd3bd9d12ad70a587b0e057e5d0fc1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 2000
